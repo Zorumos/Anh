@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="screen">
+    <div class="center">
+        <div class="progress">
+            <div class="progress-step active"></div>
+            <div class="progress-step active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
+
+        <img src="imgs\chicken4.jpg" class="chicken" alt="Chicken">
+
+        <h1 class="big-intro">⏰ Pick the Time</h1>
+
+        <p class="big-sub">When should we meet for this cluck‑tastic date?</p>
+
+        <input id="timeInput" type="time" class="input">
+
+        <div class="btn-row">
+            <a href="date.html" class="btn small">Back</a>
+            <a href="place.html" class="btn small" onclick="saveTime()">Next</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

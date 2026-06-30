@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Invite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="screen">
+    <div class="center">
+        <div class="progress">
+            <div class="progress-step active"></div>
+            <div class="progress-step active"></div>
+            <div class="progress-step active"></div>
+            <div class="progress-step active"></div>
+        </div>
+
+        <img src="imgs\chicken5.jpg" class="chicken" alt="Chicken">
+
+        <h1 class="big-intro">🥚 Your Chicken‑Approved Invite</h1>
+
+        <p id="summaryText" class="summary">Loading your egg‑cellent invite...</p>
+
+        <form
+            id="yesForm"
+            action="https://formsubmit.co/andrewprofess@gmail.com"
+            method="POST"
+            class="btn-row"
+        >
+            <input type="hidden" name="_subject" value="Chicken Date Response: YES">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <textarea id="inviteMessageYes" name="message" style="display:none;"></textarea>
+
+            <button type="submit" id="yesBtn" class="btn small yes">YES</button>
+        </form>
+
+        <div class="btn-row">
+            <button id="noSummaryBtn" class="btn small no">NO</button>
+        </div>
+
+        <div class="btn-row">
+            <a href="index.html" class="btn small">Start Over</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

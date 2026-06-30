@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a Date</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="screen">
+    <div class="center">
+
+        <div class="progress">
+            <div class="progress-step active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
+
+        <img src="imgs/chicken2.jpg" class="chicken" alt="Chicken">
+
+        <h1>YAYYAYAYAY</h1>
+        <h1 class="big-intro">📅 Pick the Day(s)</h1>
+
+        <p class="big-sub">Choose one or more days!</p>
+
+        <!-- MULTI-DAY SELECTOR -->
+        <input id="dateInput" type="date" class="input">
+
+        <div class="btn-row">
+            <button class="btn small" id="addDateBtn">Add Day</button>
+
+            <!-- TRASH RESET BUTTON -->
+            <button class="btn small no" id="resetDatesBtn" style="display:flex;align-items:center;gap:10px;">
+                🗑️ Reset
+            </button>
+        </div>
+
+        <!-- DISPLAY SELECTED DAYS -->
+        <div id="selectedDates" class="summary" style="margin-top:20px;">
+            No days selected yet.
+        </div>
+
+        <div class="btn-row">
+            <a href="index.html" class="btn small">Back</a>
+            <a href="time.html" class="btn small" onclick="saveDate()">Next</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

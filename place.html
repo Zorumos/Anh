@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a Place</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="screen">
+    <div class="center">
+        <div class="progress">
+            <div class="progress-step active"></div>
+            <div class="progress-step active"></div>
+            <div class="progress-step active"></div>
+            <div class="progress-step"></div>
+        </div>
+
+        <img src="imgs\chicken3.avif" class="chicken" alt="Chicken">
+
+        <h1 class="big-intro">📍 Pick the Place</h1>
+
+        <p class="big-sub">Where should this legendary chicken date happen?</p>
+
+        <select id="placeSelect" class="input">
+            <option value="">Choose a place...</option>
+            <option value="a cozy café">Qahwah House / Coffee Shop</option>
+            <option value="a nice restaurant">Doan’s Vietnamese Cuisine</option>
+            <option value="the park">Taipei Express</option>
+            <option value="the movies">Menya Noodle Counter</option>
+        </select>
+
+        <div class="btn-row">
+            <a href="time.html" class="btn small">Back</a>
+            <a href="summary.html" class="btn small" onclick="savePlace()">Next</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
