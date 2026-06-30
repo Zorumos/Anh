@@ -1,4 +1,6 @@
-/* RESET */
+/* ============================================================
+   GLOBAL RESET
+============================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -6,67 +8,94 @@
     font-family: "Segoe UI", sans-serif;
 }
 
-/* BASE BODY */
+/* ============================================================
+   BODY + SCREEN FITTING
+============================================================ */
 body {
     opacity: 0;
+    transition: opacity 0.6s ease;
 }
 
-/* FULL SCREEN BACKGROUND */
 body.screen {
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(135deg, #7edc6f, #b4ffae);
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: clamp(10px, 4vw, 40px);
+    background: linear-gradient(135deg, #7edc6f, #b4ffae);
 }
 
-/* CENTER CONTENT */
+/* ============================================================
+   MAIN CONTAINER
+============================================================ */
 .center {
     width: 100%;
     max-width: 700px;
-    padding: clamp(20px, 5vw, 40px);
+    margin: 0 auto;
     text-align: center;
+    padding: clamp(10px, 4vw, 40px);
 }
 
-/* CHICKEN IMAGE */
+/* ============================================================
+   CHICKEN IMAGE
+============================================================ */
 .chicken {
-    width: clamp(120px, 30vw, 240px);
-    margin-bottom: 25px;
+    width: clamp(120px, 40vw, 260px);
+    height: auto;
+    margin-bottom: clamp(20px, 5vw, 40px);
     animation: chickenBob 2s infinite ease-in-out;
 }
 
-/* HEADINGS / TEXT */
+/* ============================================================
+   HEADINGS
+============================================================ */
 .big-intro {
-    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 4vw, 30px);
     text-shadow: 3px 3px 0px #2f7f2f;
 }
 
 .big-sub {
-    font-size: clamp(1.6rem, 5vw, 2.8rem);
-    margin-bottom: 30px;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-bottom: clamp(20px, 5vw, 40px);
     font-weight: 600;
 }
 
-/* BUTTONS */
+/* ============================================================
+   INPUTS
+============================================================ */
+.input {
+    width: 100%;
+    padding: clamp(12px, 3vw, 18px);
+    border-radius: 14px;
+    border: none;
+    margin-top: 20px;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    color: #2f7f2f;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
 .btn {
     display: inline-block;
-    padding: clamp(12px, 3vw, 18px) clamp(20px, 5vw, 36px);
+    padding: clamp(10px, 3vw, 18px) clamp(20px, 5vw, 36px);
     background: #ffffff;
     color: #2f7f2f;
     border-radius: 999px;
     text-decoration: none;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
     font-weight: 700;
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     border: none;
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     position: relative;
+    max-width: 100%;
 }
 
 .btn:hover {
@@ -79,17 +108,7 @@ body.screen {
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* BUTTON ROW */
-.btn-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(20px, 5vw, 40px);
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-/* YES / NO */
+/* YES / NO COLORS */
 .yes {
     z-index: 1;
 }
@@ -100,41 +119,41 @@ body.screen {
     z-index: 2;
 }
 
-.yes:hover {
-    background: #d6ffd2;
-}
-
 .no:hover {
     background: #ff7b7b;
 }
 
-/* INPUTS */
-.input {
-    width: 100%;
-    padding: 18px;
-    border-radius: 14px;
-    border: none;
-    margin-top: 20px;
-    font-size: 1.4rem;
-    color: #2f7f2f;
+/* ============================================================
+   BUTTON ROW (RESPONSIVE)
+============================================================ */
+.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 4vw, 30px);
+    margin-top: clamp(20px, 5vw, 40px);
 }
 
-/* SUMMARY BOX */
+/* ============================================================
+   SUMMARY BOX
+============================================================ */
 .summary {
     background: #ffffff;
     color: #2f7f2f;
-    padding: 28px;
+    padding: clamp(15px, 4vw, 30px);
     border-radius: 14px;
-    font-size: 1.5rem;
-    margin-bottom: 35px;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    margin-bottom: clamp(20px, 5vw, 40px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* PROGRESS BAR */
+/* ============================================================
+   PROGRESS BAR
+============================================================ */
 .progress {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto clamp(20px, 5vw, 40px) auto;
     display: flex;
     justify-content: space-between;
 }
@@ -151,7 +170,9 @@ body.screen {
     background: #4caf50;
 }
 
-/* CONFETTI */
+/* ============================================================
+   CONFETTI
+============================================================ */
 .confetti-piece {
     position: fixed;
     width: 12px;
@@ -163,7 +184,9 @@ body.screen {
     z-index: 9999;
 }
 
-/* LOADING SCREEN */
+/* ============================================================
+   LOADING SCREEN
+============================================================ */
 #loadingScreen {
     position: fixed;
     inset: 0;
@@ -181,7 +204,9 @@ body.screen {
     animation: chickenBob 1.5s infinite ease-in-out;
 }
 
-/* PAGE TRANSITIONS */
+/* ============================================================
+   PAGE TRANSITIONS
+============================================================ */
 .page-enter {
     opacity: 0;
     transform: translateY(40px);
@@ -193,12 +218,16 @@ body.screen {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* YES HEARTBEAT */
+/* ============================================================
+   YES HEARTBEAT
+============================================================ */
 .yes-heartbeat {
     animation: heartbeat 1.2s infinite ease-in-out;
 }
 
-/* YES SUPER MODE */
+/* ============================================================
+   YES SUPER MODE
+============================================================ */
 .yes-super {
     animation: yesSuperPulse 0.6s infinite ease-in-out;
     box-shadow: 0 0 40px #7fff7f, 0 0 80px #4cff4c;
@@ -216,7 +245,9 @@ body.screen {
     animation: sparkleSpin 1.2s infinite linear;
 }
 
-/* ANIMATIONS */
+/* ============================================================
+   ANIMATIONS
+============================================================ */
 @keyframes chickenBob {
     0% { transform: translateY(0); }
     50% { transform: translateY(-18px); }
